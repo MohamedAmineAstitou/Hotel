@@ -1,0 +1,23 @@
+<div class="col-md-6 booking-container">
+  <h2 class="text-center">Add booking</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="lodgerId">Lodger Id:</label>
+      <input type="text" formControlName="lodgerId" placeholder="lodgerId" name="lodgerId" class="form-control" id="lodgerId">
+    </div>
+
+    <div class="form-group">
+      <label for="dateOfArrival">Date of Arrival :</label>
+      <input type="datetime-local" formControlName="dateOfArrival" placeholder="dateOfArrival" name="dateOfArrival" class="form-control" id="dateOfArrival" >
+    </div>
+
+    <div class="form-group">
+      <label for="dateOfDeparture">Date of Departure :</label>
+      <input type="datetime-local" formControlName="dateOfDeparture" placeholder="dateOfDeparture" name="dateOfDeparture" class="form-control" id="dateOfDeparture" >
+    </div>
+
+
+
+    <button class="btn btn-success">Add</button>
+  </form>
+</div>

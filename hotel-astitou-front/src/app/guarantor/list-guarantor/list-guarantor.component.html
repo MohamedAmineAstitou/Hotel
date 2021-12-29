@@ -1,0 +1,39 @@
+<div class="col-md-6 guarantor-container">
+  <h2 style="margin: auto"> Guarantor </h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Name</th>
+      <th>Firstname</th>
+      <th>Gender</th>
+      <th>Adresse</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Email</th>
+      <th>Postal Code</th>
+      <th>Phone Number</th>
+      <th>Lodger Id</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let guarantor of guarantors">
+      <td class="hidden">{{guarantor.id}}</td>
+      <td>{{guarantor.name}}</td>
+      <td>{{guarantor.firstname}}</td>
+      <td>{{guarantor.name}}</td>
+      <td>{{guarantor.adress}}</td>
+      <td>{{guarantor.city}}</td>
+      <td>{{guarantor.country}}</td>
+      <td>{{guarantor.email}}</td>
+      <td>{{guarantor.postalCode}}</td>
+      <td>{{guarantor.phoneNumber}}</td>
+      <td>{{guarantor.lodgerId}}</td>
+
+      <td><button class="btn btn-success" (click)="deleteGuarantor(guarantor)"> Delete</button></td><td>
+       <button class="btn btn-success" (click)="editGuarantor(guarantor)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

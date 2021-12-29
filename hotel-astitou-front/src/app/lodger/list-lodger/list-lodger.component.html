@@ -1,0 +1,45 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title m-b-0">Locataires</h5>
+            </div>
+  <div class="table-responsive">
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th class="hidden">Id</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Sexe</th>
+      <th scope="col">Civilité</th>
+      <th scope="col">Email</th>
+      <th scope="col">Numéro de téléphone</th>
+      <th scope="col">Registre National</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    
+    </tr>
+    </thead>
+    <tbody class="customtable">
+    <tr *ngFor="let lodger of lodgers">
+      <td class="hidden">{{lodger.id}}</td>
+      <td>{{lodger.name}}</td>
+      <td>{{lodger.firstname}}</td>
+      <td>{{lodger.gender}}</td>
+      <td>{{lodger.civility}}</td>
+      <td>{{lodger.email}}</td>
+      <td>{{lodger.phoneNumber}}</td>
+      <td>{{lodger.nationalRegister}}</td>
+
+      <td><button class="btn btn-danger" (click)="deleteLodger(lodger)"> Delete</button></td><td>
+       <button class="btn btn-success" (click)="editLodger(lodger)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <div> </div>
+  <button class="btn btn-dark"  (click)="addLodger()"> Add Lodger</button>
+</div>

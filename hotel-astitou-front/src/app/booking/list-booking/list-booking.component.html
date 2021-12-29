@@ -1,0 +1,29 @@
+<div class="col-md-6 lodger-container">
+  <h2 style="margin: auto"> Booking </h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Id Apartment</th>
+      <th>Id Lodger</th>
+      <th>Date of Arrival</th>
+      <th>Date Of Departure</th>
+ 
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let booking of bookings">
+      <td class="hidden">{{booking.id}}</td>
+      <td>{{booking.idApartment}}</td>
+      <td>{{booking.lodgerId}}</td>
+      <td>{{booking.dateOfArrival}}</td>
+      <td>{{booking.dateOfDeparture}}</td>
+
+
+      <td><button class="btn btn-success" (click)="deleteBooking(booking)"> Delete</button></td>
+      <td><button class="btn btn-success" (click)="editBooking(booking)" style="margin-left: 20px;"> Edit</button></td>
+      <td><button class="btn btn-success" (click)="generateBail(booking)" style="margin-left: 20px;"> Generate Bail</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

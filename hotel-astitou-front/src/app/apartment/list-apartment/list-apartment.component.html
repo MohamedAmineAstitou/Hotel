@@ -1,0 +1,36 @@
+<div class="col-md-6 lodger-container">
+  <h2 style="margin: auto"> Apartment </h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addApartment()"> Add Apartment</button>
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>adress</th>
+      <th>type</th>
+      <th>floor</th>
+      <th>roomNumber</th>
+      <th>totalArea</th>
+      <th>bedroomArea</th>
+      <th>diningArea</th>
+      <th>rentPrice</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let apartment of apartments">
+      <td class="hidden">{{apartment.id}}</td>
+      <td>{{apartment.adress}}</td>
+      <td>{{apartment.type}}</td>
+      <td>{{apartment.floor}}</td>
+      <td>{{apartment.roomNumber}}</td>
+      <td>{{apartment.totalArea}}</td>
+      <td>{{apartment.bedroomArea}}</td>
+      <td>{{apartment.diningArea}}</td>
+      <td>{{apartment.rentPrice}}</td>
+
+      <td><button class="btn btn-success" (click)="deleteApartment(apartment)"> Delete</button></td>
+      <td><button class="btn btn-success" (click)="editApartment(apartment)" style="margin-left: 20px;"> Edit</button></td>
+      <td><button class="btn btn-success" (click)="addBooking(apartment)" style="margin-left: 20px;"> Louer</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

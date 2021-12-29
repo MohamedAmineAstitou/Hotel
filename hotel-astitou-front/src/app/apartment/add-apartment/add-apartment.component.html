@@ -1,0 +1,46 @@
+<div class="col-md-6 apartment-container">
+  <h2 class="text-center">Add Apartment</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="adress">Adresse :</label>
+      <input type="text" formControlName="adress" placeholder="adress" name="adress" class="form-control" id="adress" >
+    </div>
+
+
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <input type="text" formControlName="type" placeholder="type" name="type" class="form-control" id="type">
+    </div>
+    <div class="form-group">
+      <label for="floor">Floor:</label>
+      <input type="number" formControlName="floor" placeholder="floor" name="floor" class="form-control" id="floor">
+    </div>
+    <div class="form-group">
+      <label for="roomNumber">Room Number:</label>
+      <input type="number" formControlName="roomNumber" placeholder="roomNumber" name="roomNumber" class="form-control" id="roomNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="totalArea">Total area:</label>
+      <input type="number" formControlName="totalArea" placeholder="floor" name="totalArea" class="form-control" id="totalArea">
+    </div>
+
+    <div class="form-group">
+      <label for="bedroomArea">Bedroom Area:</label>
+      <input type="number" formControlName="bedroomArea" placeholder="bedroomArea" name="bedroomArea" class="form-control" id="bedroomArea">
+    </div>
+
+    <div class="form-group">
+      <label for="diningArea">Dining area:</label>
+      <input type="number" formControlName="diningArea" placeholder="diningArea" name="diningArea" class="form-control" id="diningArea">
+    </div>
+
+    <div class="form-group">
+      <label for="rentPrice">Rent price:</label>
+      <input type="number" formControlName="rentPrice" placeholder="rentPrice" name="rentPrice" class="form-control" id="rentPrice">
+    </div>
+
+
+    <button class="btn btn-success">Add</button>
+  </form>
+</div>
